@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Content } from '../helper-files/content-interface';
 
 @Component({
@@ -7,37 +7,21 @@ import { Content } from '../helper-files/content-interface';
   styleUrls: ['./hobby.component.scss']
 }) 
 export class HobbyComponent implements OnInit {
-  /* myHobby:Content = {
-    id:1,
-    title:"Gaming",
-    description:"I enjoy playing Games from Genres such as JRPGs, MMOs, FPS, Open World and Survival Games",
-    creator:"Michael",
-    type:"hobby"
-  }
+  @Input() content : Content; 
 
-  myHobby2:Content = {
-    id:2,
-    title:"Reading",
-    description:"I enjoy Reading in my downtime, Currently I am reading the Wheel of Time Series",
-    creator:"Michael",
-    type:"hobby"
-  }
-
-  myHobby3:Content = {
-    id:3,
-    title:"Building PC's",
-    description:"I enjoy helping people put together PCs, as for me it feels like putting together a complex puzzle",
-    creator:"Michael",
-    type:"hobby"
-  } */
-
- /*  myHobbies = new content-list(this.myHobby)
-  myHobbyList = this.myHobbies.getHobby(); */
+/*   myHobbies = new content-list(this.myHobby)
+  myHobbyList = this.myHobbies.getHobby();  */
 
   constructor(){
-   /*  this.myHobbies.addItem(this.myHobby);
-    this.myHobbies.addItem(this.myHobby2);
-    this.myHobbies.addItem(this.myHobby3); */
+    this.content = {
+      id: 1,
+      title:"T1",
+      description:"testing grounds",
+      creator:"King",
+      imgURL:"https://www.educationcorner.com/images/featured-improve-test-taking.jpg",
+      type:"Test",
+      tags: ["Test", "Testing"]
+    }; 
   }
   
   
@@ -50,5 +34,9 @@ export class HobbyComponent implements OnInit {
       x.innerHTML += this.myHobbies.printContentByIndex(2);
   } */
   } 
+
+  imageText() {
+    console.log("image url: " + this.content.imgURL + "Image Title:" + this.content.title);
+  }
 
 }
