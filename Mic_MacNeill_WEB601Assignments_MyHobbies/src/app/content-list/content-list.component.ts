@@ -7,10 +7,7 @@ import { Content } from '../helper-files/content-interface';
   styleUrls: ['./content-list.component.scss']
 })
   export class ContentListComponent implements OnInit {
-    ngOnInit(): void {
-      throw new Error('Method not implemented.');
-    }
-    searchFiltered: any = '';
+    searchFiltered: string = '';
     searchString: string = '';
     message: string = '';
     messageColor: string = '';
@@ -101,5 +98,8 @@ import { Content } from '../helper-files/content-interface';
         this.message = `Content with title "${this.searchFiltered.toLowerCase()}" not found.`;
         this.messageColor = 'red';
       }
+    }
+    ngOnInit(): void {
+
     }
   }

@@ -2,8 +2,11 @@
 
 </content-list> -->
 
-<!-- <input [(ngModel)]="searchFiltered" placeholder="Enter Title" />
-<button onClick="clickEvent()">Search</button> -->
+<input [(ngModel)]="searchFiltered" placeholder="Enter Title" />
+<button (click)="search()">Search</button>
+<div *ngIf="message">
+    <p [ngStyle]="{ color: messageColor }">{{ message }}</p>
+</div>
 
 <h2>Space</h2>
 <app-hobby *ngFor="let item of contentArray|filterByType: 'Space' ; index as i; first as isFirst" [content]="item" [class.is-first]="isFirst">

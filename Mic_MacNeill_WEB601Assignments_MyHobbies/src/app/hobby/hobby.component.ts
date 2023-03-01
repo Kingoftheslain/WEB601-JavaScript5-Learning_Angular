@@ -9,9 +9,6 @@ import { Content } from '../helper-files/content-interface';
 export class HobbyComponent implements OnInit {
   @Input() content : Content; 
 
-/*   myHobbies = new content-list(this.myHobby)
-  myHobbyList = this.myHobbies.getHobby();  */
-
   constructor(){
     this.content = {
       id: 1,
@@ -24,15 +21,8 @@ export class HobbyComponent implements OnInit {
     }; 
   }
   
-  
   ngOnInit(): void {
-    /* const x = document.getElementById('hobbyList');
-    console.log(x);
-    if(x) {
-      x.innerHTML += this.myHobbies.printContentByIndex(0);
-      x.innerHTML += this.myHobbies.printContentByIndex(1);
-      x.innerHTML += this.myHobbies.printContentByIndex(2);
-  } */
+    
   } 
 
   imageText() {

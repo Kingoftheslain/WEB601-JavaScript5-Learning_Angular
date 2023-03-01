@@ -1,6 +1,6 @@
 {
   "name": "mic-mac-neill-web601-assignments-my-hobbies",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
