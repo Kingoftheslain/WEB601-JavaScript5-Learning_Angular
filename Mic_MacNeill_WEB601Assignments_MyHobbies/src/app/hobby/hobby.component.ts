@@ -16,7 +16,7 @@ export class HobbyComponent implements OnInit {
       description:"testing grounds",
       creator:"King",
       imgURL:"https://www.educationcorner.com/images/featured-improve-test-taking.jpg",
-      type:"Test",
+      type: "Test",
       tags: ["Test", "Testing"]
     }; 
   }

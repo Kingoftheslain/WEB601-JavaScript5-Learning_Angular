@@ -1,9 +1,11 @@
 <!-- <content-list *ngFor=" let item of contentArray; index as i; first as isFirst" [content]="item" [class.is-first]="isFirst">
 
 </content-list> -->
+<create-content (contentCreated)="onContentCreated($event)"></create-content><br>
 
-<input [(ngModel)]="searchFiltered" placeholder="Enter Title" />
+Search:<input [(ngModel)]="searchFiltered" placeholder="Enter Title" />
 <button (click)="search()">Search</button>
+
 <div *ngIf="message">
     <p [ngStyle]="{ color: messageColor }">{{ message }}</p>
 </div>

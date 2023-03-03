@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Content } from '../helper-files/content-interface';
+import { CreateContentComponent } from '../create-content/create-content.component'
 
 @Component({
   selector: 'content-list',
@@ -99,6 +100,13 @@ import { Content } from '../helper-files/content-interface';
         this.messageColor = 'red';
       }
     }
+
+    onContentCreated(content: Content) {
+      /* this.contentArray.push(content); */
+      this.contentArray = [...this.contentArray, content];
+      console.log("success", this.contentArray);
+    }
+    
     ngOnInit(): void {
 
     }

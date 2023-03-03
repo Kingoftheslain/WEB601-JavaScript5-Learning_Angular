@@ -1,0 +1,29 @@
+<form (submit)="onSubmit()">
+    <legend>Add Content</legend>
+
+    <label>Id: </label>
+    <input [(ngModel)]="id" name="id" placeholder="Enter Title" />
+    
+    <label>Title: </label>
+    <input [(ngModel)]="title" name="title" placeholder="Enter Title" /><br>
+
+    <label>Description: </label>
+    <input [(ngModel)]="description" name="description" placeholder="Add a Description" />
+
+    <label>Creator: </label>
+    <input [(ngModel)]="creator" name="creator" placeholder="Your Name" /><br>
+
+    <label>ImgURL:</label>
+    <input [(ngModel)]="imgURL" name="imgURL" />
+
+    <label>Type:</label>
+    <input [(ngModel)]="type" name="type" placeholder="Add Type" /><br>
+
+    <label>Tags: </label>
+    <input [(ngModel)]="tags" name="tags" placeholder="Add Tags" />
+    
+    <input type="submit" value="Submit" />
+</form>
+<div *ngIf="errorMessage" [ngStyle]="{ color: errorMessageColor }">
+    {{ errorMessage }}
+  </div>
