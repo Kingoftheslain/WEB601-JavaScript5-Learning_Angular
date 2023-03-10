@@ -99,6 +99,13 @@ import { Content } from '../helper-files/content-interface';
         this.messageColor = 'red';
       }
     }
+
+    onContentCreated(content: Content) {
+      /* this.contentArray.push(content); */
+      this.contentArray = [...this.contentArray, content];
+      console.log("success", this.contentArray);
+    }
+    
     ngOnInit(): void {
 
     }
