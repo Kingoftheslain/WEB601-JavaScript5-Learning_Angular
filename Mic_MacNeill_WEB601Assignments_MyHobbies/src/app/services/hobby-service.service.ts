@@ -16,4 +16,15 @@ export class HobbyServiceService {
     /* this.messageService.add('CardService: Content Array Loaded! :D'); // Adding a message to the MessageService */
     return of(ContentDb); // Returning the Observable of the mock Hobbies
   }
+
+  getHobbysById(id: number): Observable<Content | undefined> {
+    const hobby = ContentDb.find(h => h.id === id);
+    if (hobby){
+      
+    }
+    else {
+      
+    }
+    return of(hobby);
+  }
 }
