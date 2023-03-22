@@ -9,10 +9,10 @@
 </div>
 
 <h2>Space</h2>
-<app-hobby *ngFor="let item of contentArray|filterByType: 'Space' ; index as i; first as isFirst" [content]="item" [class.is-first]="isFirst">
+<app-hobby *ngFor="let item of hobbys|filterByType: 'Space' ; index as i; first as isFirst" [content]="item" [class.is-first]="isFirst">
 
 </app-hobby>
 <h2>Nature</h2>
-<app-hobby *ngFor="let item of contentArray|filterByType: 'Nature' ; index as i; first as isFirst" [content]="item" [class.is-first]="isFirst">
+<app-hobby *ngFor="let item of hobbys|filterByType: 'Nature' ; index as i; first as isFirst" [content]="item" [class.is-first]="isFirst">
 
 </app-hobby>

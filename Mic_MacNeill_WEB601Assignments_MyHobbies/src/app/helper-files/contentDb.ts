@@ -1,6 +1,7 @@
+import { Content } from "./content-interface"
 
-    const ContentDb = {
-    contentItem: {
+    export const ContentDb:Content[] = [
+     {
       id: 1,
       title: "testing grounds",
       description: "T1",
@@ -9,7 +10,7 @@
       type: "Test",
       tags: ["Test", "Testing"]
     },
-    contentItem2: {
+     {
       id: 2,
       title: "forest reading",
       description: "T2",
@@ -18,7 +19,7 @@
       type: "Nature",
       tags: ["Nature", "Reading"]
     },
-    contentItem3: {
+     {
       id: 3,
       title: "winding path",
       description: "T3",
@@ -27,7 +28,7 @@
       type: "Nature",
       tags: ["Nature", "River"]
     },
-    contentItem4: {
+     {
       id: 4,
       title: "galactic fog",
       description: "T4",
@@ -36,7 +37,7 @@
       type: "Space",
       tags: ["Space", "Cosmos"]
     },
-    contentItem5: {
+   {
       id: 5,
       title: "city panoramic",
       description: "T5",
@@ -45,7 +46,7 @@
       type: "Cityscape",
       tags: ["City", "Panoramic"]
     },
-    contentItem6: {
+     {
       id: 6,
       title: "running puppy",
       description: "T6",
@@ -54,7 +55,7 @@
       type: "Puppy",
       tags: ["Puppy", "Cute"]
     },
-    contentItem7: {
+     {
       id: 7,
       title: "the cosmos",
       description: "T7",
@@ -63,5 +64,5 @@
       type: "Space",
       tags: ["Space", "Stars"]
     }
-  };
+  ];
   
