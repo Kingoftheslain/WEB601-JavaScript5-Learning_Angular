@@ -1,0 +1,18 @@
+<!-- <content-list *ngFor=" let item of contentArray; index as i; first as isFirst" [content]="item" [class.is-first]="isFirst">
+
+</content-list> -->
+
+<input [(ngModel)]="searchFiltered" placeholder="Enter Title" />
+<button (click)="search()">Search</button>
+<div *ngIf="message">
+    <p [ngStyle]="{ color: messageColor }">{{ message }}</p>
+</div>
+
+<h2>Space</h2>
+<app-hobby *ngFor="let item of hobbys|filterByType: 'Space' ; index as i; first as isFirst" [content]="item" [class.is-first]="isFirst">
+
+</app-hobby>
+<h2>Nature</h2>
+<app-hobby *ngFor="let item of hobbys|filterByType: 'Nature' ; index as i; first as isFirst" [content]="item" [class.is-first]="isFirst">
+
+</app-hobby>

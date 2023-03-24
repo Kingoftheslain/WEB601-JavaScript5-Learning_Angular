@@ -1,0 +1,13 @@
+<div class="{{ content.type }}">
+  <h2>{{ content.title }}</h2>
+  <p>{{ content.description }}</p>
+  <img class="image" *ngIf="content.imgURL; else defImage" [src]="content.imgURL" alt="Content Image" (click)="imageText()"><br>
+  By:<em> {{ content.creator }}</em><br>
+  <ul>
+    <li *ngFor="let tag of content.tags" [appHoverAffect]="{fontWeight: 'bold'}" style="cursor: pointer;" class="{{ tag }}">{{ tag }}</li>
+  </ul>
+  <p appHoverAffect style="cursor: pointer;" [appHoverAffect]="{textDecoration: 'underline'}">Type: {{ content.type }}</p>
+</div>
+<ng-template #defImage> 
+  <img src="https://media.lashowroom.com/10/error-item-not-found.png" alt="Default Image"> 
+</ng-template>
