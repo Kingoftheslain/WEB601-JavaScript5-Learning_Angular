@@ -6,6 +6,9 @@ import { ContentListComponent } from './content-list/content-list.component';
 import { FilterByTypePipe } from './filter-by-type.pipe';
 import { HoverAffectDirective } from './hover-affect.directive';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemorydataService } from './services/in-memorydata.service';
 import { HobbyMessagesComponent } from './messages/hobby-messages/hobby-messages.component';
 
 @NgModule({
@@ -19,9 +22,15 @@ import { HobbyMessagesComponent } from './messages/hobby-messages/hobby-messages
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+HttpClientInMemoryWebApiModule.forRoot(InMemorydataService, {
+  dataEncapsulation: false,
+  delay: 1000,
+});

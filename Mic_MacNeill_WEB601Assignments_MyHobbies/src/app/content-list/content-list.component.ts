@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
+import { from, Observable } from 'rxjs';
 import { Content } from '../helper-files/content-interface';
 import { ContentDb } from '../helper-files/contentDb';
 import { HobbyServiceService } from '../services/hobby-service.service';
@@ -12,7 +14,7 @@ import { MessageServiceService } from '../services/message-service.service';
 })
 export class ContentListComponent implements OnInit {
   
-  constructor(private HobbyService: HobbyServiceService, private messageService: MessageServiceService){}
+  constructor(private http: HttpClient,private HobbyService: HobbyServiceService, private messageService: MessageServiceService){}
 
   ngOnInit(): void {
       this.getHobbys();
@@ -22,6 +24,11 @@ export class ContentListComponent implements OnInit {
     this.HobbyService.getHobbys()
       .subscribe(hobbys => this.hobbys = hobbys)
   }
+
+    // getHobbys() : Observable<Content[]>{
+    //   console.log(this.http.get<Content[]>("api/content"));
+    //   return this.http.get<Content[]>("api/content");
+    // }
 
     searchFiltered: string = '';
     searchString: string = '';
