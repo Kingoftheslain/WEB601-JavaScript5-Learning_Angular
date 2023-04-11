@@ -20,15 +20,15 @@ export class ContentListComponent implements OnInit {
       this.getHobbys();
   }
 
-  getHobbys(): void{
+  /* getHobbys(): void{
     this.HobbyService.getHobbys()
       .subscribe(hobbys => this.hobbys = hobbys)
-  }
+  } */
 
-    // getHobbys() : Observable<Content[]>{
-    //   console.log(this.http.get<Content[]>("api/content"));
-    //   return this.http.get<Content[]>("api/content");
-    // }
+     getHobbys() {
+       console.log(this.http.get<Content[]>("api/content"));
+       return this.http.get<Content[]>("api/content");
+    } 
 
     searchFiltered: string = '';
     searchString: string = '';

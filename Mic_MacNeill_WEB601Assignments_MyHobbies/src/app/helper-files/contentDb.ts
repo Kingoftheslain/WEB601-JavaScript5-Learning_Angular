@@ -1,6 +1,6 @@
 import { Content } from "./content-interface"
 
-    export const ContentDb:Content[] = [
+    export const ContentDb : Content[] = [
      {
       id: 1,
       title: "testing grounds",

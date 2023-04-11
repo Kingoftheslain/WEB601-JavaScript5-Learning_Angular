@@ -12,10 +12,11 @@ export class HobbyServiceService {
 
   constructor(private Http: HttpClient, private messageService: MessageServiceService) { }
 
-  getHobbys(): Observable<Content[]> {
-    // const hobbys = of(ContentDb); // Creating an Observable of the mock Hobbies
+  getHobbys() {
+    //const hobbys = of(ContentDb); // Creating an Observable of the mock Hobbies
     this.messageService.add('HobbyService: Content Array Loaded! '); // Adding a message to the MessageService
     // return of(ContentDb); // Returning the Observable of the mock Hobbies
+    console.log(this.Http.get<Content[]>("api/content"))
     return this.Http.get<Content[]>("api/content");
   }
 
