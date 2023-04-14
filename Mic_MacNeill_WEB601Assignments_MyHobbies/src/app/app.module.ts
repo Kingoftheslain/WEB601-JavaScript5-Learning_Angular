@@ -7,6 +7,7 @@ import { FilterByTypePipe } from './filter-by-type.pipe';
 import { HoverAffectDirective } from './hover-affect.directive';
 import { FormsModule } from '@angular/forms';
 import { HobbyMessagesComponent } from './messages/hobby-messages/hobby-messages.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HobbyMessagesComponent } from './messages/hobby-messages/hobby-messages
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
