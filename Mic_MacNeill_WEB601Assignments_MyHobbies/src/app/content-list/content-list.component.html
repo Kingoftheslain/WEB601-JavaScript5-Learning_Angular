@@ -1,22 +1,24 @@
 <!-- <content-list *ngFor=" let item of contentArray; index as i; first as isFirst" [content]="item" [class.is-first]="isFirst">
 
 </content-list> -->
-<div id="searchModel" style="align-content: center;">
-<input [(ngModel)]="searchFiltered" placeholder="Enter Title" />
-<button (click)="search()">Search</button>
-<div *ngIf="message">
-    <p [ngStyle]="{ color: messageColor }">{{ message }}</p>
-</div>
+<div id="searchModel" style="margin-top: 5px; margin-bottom: 5px;">
+    <mat-form-field>
+        <input matInput [(ngModel)]="searchFiltered" placeholder="Enter Title" />
+    </mat-form-field>
+    <button mat-raised-button (click)="search()">Search</button>
+    <div *ngIf="message">
+        <p [ngStyle]="{ color: messageColor }">{{ message }}</p>
+    </div>
 </div>
 
 <h2>Space</h2>
 <div id="list1">
-<app-hobby *ngFor="let item of hobbys|filterByType: 'Space' ; index as i; first as isFirst" [content]="item" [class.is-first]="isFirst">
-</app-hobby>
+    <app-hobby *ngFor="let item of hobbys|filterByType: 'Space' ; index as i; first as isFirst" [content]="item" [class.is-first]="isFirst">
+    </app-hobby>
 </div>
 
 <h2>Nature</h2>
 <div id="list2">
-<app-hobby *ngFor="let item of hobbys|filterByType: 'Nature' ; index as i; first as isFirst" [content]="item" [class.is-first]="isFirst">
-</app-hobby>
+    <app-hobby *ngFor="let item of hobbys|filterByType: 'Nature' ; index as i; first as isFirst" [content]="item" [class.is-first]="isFirst">
+    </app-hobby>
 </div>

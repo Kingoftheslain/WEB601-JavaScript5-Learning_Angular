@@ -1,18 +1,45 @@
-div {
+mat-card {
     border: 1px solid blue;
     margin-bottom: 10px;
-    margin-right: 50%;
-    margin-left: 2%;
-    width: 30%;
+    margin-left: 10px;
+    width: 450px;
+    height: 540px;
     display: inline-block;
 }
 .is-first {
     border: 2px solid black;
 }
 img {
-    width: 80%;
-    height: 14%;
+    width: 380px;
+    height: 380px;
     border: 1px dashed black;
+    margin-left: 6%;
 }
+h2{
+    margin-left: 40%;
+}
+p {
+    margin-left: 40%;
+}
+p#desc {
+    margin-left: 50%;
+    margin-top: -5%;
+    margin-bottom: -2px;
+
+}
+p#crtr{
+    margin-bottom: -8%;
+}
+ul {
+    margin-left: 35%;
+    list-style-type: none;
+    margin-bottom: 1px;
+}
+
+mat-icon{
+    margin-left: -12%;
+    margin-bottom: -12%;
+}
+
 
 
